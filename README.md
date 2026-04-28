@@ -53,6 +53,17 @@ All external access is routed through the reverse proxy. No ports are directly f
 
 ## Services
 
+Detailed documentation for each service lives in the [`/services`](services/) directory.
+
+| Service | Type | Status | Docs |
+|---------|------|--------|------|
+| Nginx Proxy Manager | LXC | running | [services/nginx-proxy-manager.md](services/nginx-proxy-manager.md) |
+| Immich | KVM | running | [services/immich.md](services/immich.md) |
+| Uptime Kuma | LXC | running | [services/uptime-kuma.md](services/uptime-kuma.md) |
+| Monitoring (Grafana + Prometheus) | LXC | running | [services/monitoring.md](services/monitoring.md) |
+| Fitness App | LXC | running | [services/fitness-app.md](services/fitness-app.md) |
+| Discord Bots | LXC | stopped | [services/discord-bots.md](services/discord-bots.md) |
+
 ### Nginx Proxy Manager (LXC)
 Central reverse proxy for all self-hosted services. Handles SSL termination via Let's Encrypt and routes traffic to internal services by hostname. No service is directly reachable from outside this proxy.
 
